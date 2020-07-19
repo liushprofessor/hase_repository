@@ -223,6 +223,45 @@ public class HbaseUtil {
         addUrl(rowkey, url, table);
     }
 
+
+
+    public void addArea(String rowkey,String code,String sheng,String di,String xian)throws IOException {
+        Table table=connection.getTable(TableName.valueOf("AREA"));
+        addSheng(rowkey,sheng,table);
+        addDi(rowkey,di,table);
+        addXian(rowkey,xian,table);
+        addCode(rowkey,code,table);
+    }
+
+    private void addCode(String rowkey,String code,Table table) throws IOException {
+
+        Put put=new Put(Bytes.toBytes(rowkey));
+        put.addColumn(Bytes.toBytes("data"),Bytes.toBytes("CODE"),Bytes.toBytes(code));
+        table.put(put);
+    }
+
+    private void addSheng(String rowkey,String sheng,Table table) throws IOException {
+        Put put=new Put(Bytes.toBytes(rowkey));
+        put.addColumn(Bytes.toBytes("data"),Bytes.toBytes("SHENG"),Bytes.toBytes(sheng));
+        table.put(put);
+    }
+
+    private void addDi(String rowkey,String di,Table table) throws IOException {
+        Put put=new Put(Bytes.toBytes(rowkey));
+        put.addColumn(Bytes.toBytes("data"),Bytes.toBytes("DI"),Bytes.toBytes(di));
+        table.put(put);
+    }
+
+
+    private void addXian(String rowkey,String xian,Table table) throws IOException {
+        Put put=new Put(Bytes.toBytes(rowkey));
+        put.addColumn(Bytes.toBytes("data"),Bytes.toBytes("XIAN"),Bytes.toBytes(xian));
+        table.put(put);
+    }
+
+
+
+
     public void addProductDetailData(String rowKey,String productRowKey,String titleDetail,String describe,String brand) throws IOException {
 
         Table table=connection.getTable(TableName.valueOf("taobaoDetailList"));

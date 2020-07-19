@@ -34,6 +34,20 @@ public class HbaseController {
 
     }
 
+    @RequestMapping("addArea")
+    public String addArea(String rowKey ,String code,String sheng,String di,String xian){
+
+        try {
+            hbaseUtil.addArea(rowKey,code,sheng,di,xian);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "fail";
+        }
+        return "success";
+    }
+
+
+
     @RequestMapping("addProductDetailData")
     public String addProductDetailData(String rowKey,String productRowKey,String titleDetail,String describe,String brand){
         try {
