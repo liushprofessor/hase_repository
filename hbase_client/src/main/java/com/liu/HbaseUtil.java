@@ -337,7 +337,7 @@ public class HbaseUtil {
         if(results==null){
             return null;
         }
-        List<Product> products=new ArrayList<>();
+        List<Product> products=new ArrayList<Product>();
         for(Result result :results){
             String rowkey2=Bytes.toString(result.getRow());
             List<Cell> cells=result.listCells();

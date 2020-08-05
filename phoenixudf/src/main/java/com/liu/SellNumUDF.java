@@ -44,7 +44,7 @@ public class SellNumUDF extends ScalarFunction {
 
 
 
-    @Override
+
     public boolean evaluate(Tuple tuple, ImmutableBytesWritable immutableBytesWritable) {
         //获取到参数
         Expression arg1 =this.getChildren().get(0);
@@ -81,7 +81,7 @@ public class SellNumUDF extends ScalarFunction {
         return false;
     }
 
-    @Override
+
     public PDataType getDataType() {
         return PInteger.INSTANCE;
     }

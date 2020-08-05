@@ -2,25 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.liu</groupId>
-    <artifactId>phoenix</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>hbase_client</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>..</module>
-    </modules>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.phoenix/phoenix-core -->
+        <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
         <dependency>
-            <groupId>org.apache.phoenix</groupId>
-            <artifactId>phoenix-core</artifactId>
-            <version>4.14.0-cdh5.14.2</version>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>2.5.0</version>
         </dependency>
 
     </dependencies>
 
-    
+
 </project>
