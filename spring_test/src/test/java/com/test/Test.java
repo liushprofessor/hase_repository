@@ -60,7 +60,11 @@ public class Test {
 
     }
 
-
+    /**
+     * requestFields 可以理解为添加的示例数据入{"id":"222","name":"Liush"}
+     * responseFields 同理
+     * requestParameters 为入参数,使用此方法添加后会生成入场表格文件
+     */
 
     @org.junit.Test
     public void addUserTest()throws Exception{

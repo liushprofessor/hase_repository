@@ -71,8 +71,6 @@
                             <attributes>
                                 <snippets>${snippetsDirectory}</snippets>
                             </attributes>
-                        <!--    <sourceDirectory>src/docs/asciidocs</sourceDirectory>-->
-                            <!--<outputDirectory>target/generated-docs</outputDirectory>-->
                         </configuration>
                     </execution>
                 </executions>
@@ -85,6 +83,7 @@
                 </dependencies>
             </plugin>
             <plugin>
+                <!-- 自定义打包插件讲文档位置打包时放入固定位置 -->
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
                     <execution>
